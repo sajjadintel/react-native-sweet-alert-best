@@ -7,11 +7,11 @@
 
 ## Getting started
 
-`$ npm install react-native-sweet-alert --save`
+`$ npm install react-native-sweet-alert-best --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-sweet-alert`
+`$ react-native link react-native-sweet-alert-best`
 
 ### Manual installation
 

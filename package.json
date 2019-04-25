@@ -1,6 +1,6 @@
 {
-  "name": "react-native-sweet-alert",
-  "version": "2.0.1",
+  "name": "react-native-sweet-alert-best",
+  "version": "1.0.0",
   "description": "SweetAlert native library for React Native",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Clip-sub/react-native-sweet-alert.git"
+    "url": "git+https://github.com/sajadabasi/react-native-sweet-alert-best.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
@@ -24,9 +24,9 @@
   "author": "Clip-sub",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Clip-sub/react-native-sweet-alert/issues"
+    "url": "https://github.com/sajadabasi/react-native-sweet-alert-best/issues"
   },
-  "homepage": "https://github.com/Clip-sub/react-native-sweet-alert#readme",
+  "homepage": "https://github.com/sajadabasi/react-native-sweet-alert-best#readme",
   "peerDependencies": {
     "react": "*",
     "react-native": "*"

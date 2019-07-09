@@ -27,6 +27,7 @@ const SweetAlert = {
     Native.showAlertWithOptions(options ? options : DEFAULT_OPTIONS, callback)
   },
   dismissAlert: () => Native.hideSweetAlert(),
+  showCancelButton: (val) => Native.showCancelButton(val),
 };
 
 export default SweetAlert;

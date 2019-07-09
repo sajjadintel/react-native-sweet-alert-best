@@ -30,6 +30,8 @@ public class RNSweetAlertModule extends ReactContextBaseJavaModule {
     String title = options.hasKey("title") ? options.getString("title") : "";
     String contentText = options.hasKey("subTitle") ? options.getString("subTitle") : "";
     String barColor = options.hasKey("barColor") ? options.getString("barColor") : "";
+    String confirmButtonTitle = options.hasKey("confirmButtonTitle") ? options.getString("confirmButtonTitle") : "";
+    String otherButtonTitle = options.hasKey("otherButtonTitle") ? options.getString("otherButtonTitle") : "";
     boolean cancellable = !options.hasKey("cancellable") || options.getBoolean("cancellable");
     switch (type) {
       case "normal":
@@ -67,6 +69,12 @@ public class RNSweetAlertModule extends ReactContextBaseJavaModule {
     });
     sweetAlertDialog.setTitleText(title);
     sweetAlertDialog.setContentText(contentText);
+
+    if (!otherButtonTitle.equals("")) {
+      sweetAlertDialog.setCancelText(otherButtonTitle);
+    }
+    sweetAlertDialog.setConfirmText(confirmButtonTitle);
+
     sweetAlertDialog.setCancelable(cancellable);
     if (!barColor.equals("")) {
       setBarColor(barColor);

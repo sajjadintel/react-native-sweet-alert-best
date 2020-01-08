@@ -7,11 +7,11 @@
 
 ## Getting started
 
-`$ npm install react-native-sweet-alert-best --save`
+`$ npm install react-native-sweet-alert --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-sweet-alert-best`
+`$ react-native link react-native-sweet-alert`
 
 ### Manual installation
 
@@ -49,12 +49,6 @@ so it will look like:
   android:theme="@style/AppTheme">
 ```
 
-and add this in your `proguard-rules.pro` file
-```
- -keep class cn.pedant.SweetAlert.Rotate3dAnimation {
-    public <init>(...);
-}
-```
 # On iOS:
 
 Since the vendor library is written in Swift, apart from doing usual `react-native link react-native-sweet-alert`, you will also have to create a Bridging Header for Swift file, which is also pretty easy:

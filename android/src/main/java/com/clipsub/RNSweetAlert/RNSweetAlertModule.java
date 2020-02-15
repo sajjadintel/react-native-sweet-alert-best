@@ -1,6 +1,7 @@
 package com.clipsub.RNSweetAlert;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.Promise;
@@ -32,6 +33,11 @@ public class RNSweetAlertModule extends ReactContextBaseJavaModule {
     String barColor = options.hasKey("barColor") ? options.getString("barColor") : "";
     String confirmButtonTitle = options.hasKey("confirmButtonTitle") ? options.getString("confirmButtonTitle") : "";
     String otherButtonTitle = options.hasKey("otherButtonTitle") ? options.getString("otherButtonTitle") : "";
+	  String confirmButtonBackGroundColor = options.hasKey("confirmButtonBackGroundColor") ? options.getString("confirmButtonBackGroundColor") : "";
+	  String otherButtonBackGroundColor = options.hasKey("otherButtonBackGroundColor") ? options.getString("otherButtonBackGroundColor") : "";
+	  String confirmButtonTitleColor = options.hasKey("confirmButtonTitleColor") ? options.getString("confirmButtonTitleColor") : "";
+	  String otherButtonTitleColor = options.hasKey("otherButtonTitleColor") ? options.getString("otherButtonTitleColor") : "";
+    String fontName = options.hasKey("font") ? options.getString("font") : "";
     boolean cancellable = !options.hasKey("cancellable") || options.getBoolean("cancellable");
     switch (type) {
       case "normal":
@@ -78,6 +84,25 @@ public class RNSweetAlertModule extends ReactContextBaseJavaModule {
     sweetAlertDialog.setCancelable(cancellable);
     if (!barColor.equals("")) {
       setBarColor(barColor);
+    }
+
+
+	  if (!confirmButtonBackGroundColor.equals("")) {
+		  sweetAlertDialog.setConfirmButtonBackgroundColor(Color.parseColor(confirmButtonBackGroundColor));
+	  }
+	  if (!otherButtonBackGroundColor.equals("")) {
+		  sweetAlertDialog.setCancelButtonBackgroundColor(Color.parseColor(otherButtonBackGroundColor));
+	  }
+	  if (!otherButtonTitleColor.equals("")) {
+		  sweetAlertDialog.setCancelButtonTextColor(Color.parseColor(otherButtonTitleColor));
+	  }
+	  if (!confirmButtonTitleColor.equals("")) {
+		  sweetAlertDialog.setConfirmButtonTextColor(Color.parseColor(confirmButtonTitleColor));
+	  }
+
+    if (!fontName.equals("")) {
+	    Typeface tf = Typeface.createFromAsset(getReactApplicationContext().getAssets(), "fonts/" + fontName);
+//      sweetAlertDialog.setTypeface(tf);
     }
     sweetAlertDialog.show();
   }

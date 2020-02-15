@@ -2,7 +2,6 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "28.0.1"
 
     defaultConfig {
         minSdkVersion 16
@@ -18,7 +17,23 @@ android {
     }
 }
 
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:3.4.1")
+    }
+}
+
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.github.f0ris.sweetalert:library:1.5.3'
+//    implementation 'me.sajadabbasi.sweetalert.best:1.7.0'
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+}
+
+repositories {
+    google()
+    jcenter()
 }

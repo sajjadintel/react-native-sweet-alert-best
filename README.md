@@ -90,14 +90,16 @@ import SweetAlert from 'react-native-sweet-alert';
 
 ```
 SweetAlert.showAlertWithOptions({
-  title: '',
-  subTitle: '',
+  title: 'title',
+  subTitle: 'sub title',
   confirmButtonTitle: 'OK',
-  confirmButtonColor: '#000',
+  confirmButtonTitleColor: '#0f0',
+  otherButtonTitleColor: '#dedede',
   otherButtonTitle: 'Cancel',
-  otherButtonColor: '#dedede',
+  confirmButtonBackGroundColor: '#000',
+  otherButtonBackGroundColor: '#000',
   style: 'success',
-  cancellable: true
+  cancellable: true,
 },
   callback => console.log('callback'));
 ```
